@@ -1,0 +1,28 @@
+--Create a grocery store database
+
+CREATE TABLE apparel_store (id integer primary key, item text, quantity integer, price integer, color text);
+
+insert into apparel_store values
+(1, "tshirt", 34, 5, "red"),
+(2, "crop top", 22, 6, "white"),
+(3, "socks", 19, 3, "black"),
+(4, "blouse", 27, 12, "purple"),
+(5, "shorts", 33, 9, "black"),
+(6, "jeans", 45, 15, "blue"),
+(7, "trousers", 43, 17, "tan"),
+(8, "bikini", 36, 10, "green"),
+(9, "bra", 17, 20, "brown"),
+(10, "tshirt", 5, 5, "white"),
+(11, "leggings", 29, 23, "black"),
+(12, "slacks", 33, 18, "green"),
+(13, "cargos", 12, 17, "pink"),
+(14, "underwear", 35, 3, "black"),
+(15, "hat", 34, 15, "blue");
+
+--Display the database in descending order by price.
+
+Select * from apparel_store order by price desc;
+
+--What is the average price of all the items in the store?
+
+Select avg(price) from apparel_store
