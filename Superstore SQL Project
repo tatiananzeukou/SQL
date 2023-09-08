@@ -1,0 +1,32 @@
+#The first command allowed me to pull up the entire database of all the store product in order by price.
+SELECT * 
+FROM superstore
+ORDER BY price;
+
+#The next query allowed me to identify the total amount of items that should be present in the store across all departments.
+SELECT SUM(stock_quantity)
+FROM superstore;
+
+#This query showed the most expensive item in the store.
+SELECT MAX(price), item_name
+FROM superstore;
+
+#This query showed what the least expensive item in the store is.
+SELECT MIN(price), item_name
+FROM superstore;
+
+#This was a select statement that output a statistic about the average rating across all items in the store.
+SELECT AVG(average_rating)
+FROM superstore;
+
+#This select statement shows the average price of an item in the kitchen supplies category.
+SELECT AVG(price)
+FROM superstore
+WHERE category = "Kitchen Supplies";
+
+#This query uses a select statement to determine the item with the highest average customer rating in the electronics category.
+SELECT item_name, average_rating
+FROM superstore
+WHERE category = "Electronics"
+ORDER BY average_rating desc 
+LIMIT 1;
